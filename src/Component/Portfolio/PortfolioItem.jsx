@@ -5,7 +5,7 @@ const PortfolioItem = ({data}) => {
     <div>
     <img src={data.img} alt="mypic" />
     <div className="Overlay">
-      <a href={data.link} target="_blank" loading="lazy">
+      <a href={data.link} target="_blank" loading="lazy" rel="noreferrer">
         <LiaExternalLinkAltSolid />
       </a>
     </div>
