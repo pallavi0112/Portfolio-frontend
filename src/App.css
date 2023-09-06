@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Josefin+Slab:wght@400;500;600;700&family=Nanum+Myeongjo:wght@400;700;800&family=Playfair+Display:wght@400;500;800&family=Poppins:wght@200;300;400;500;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root{
+  --bg-black-900 : #f2f2fc ;
+  --bg-black-100 : #fdf9ff ;
+  --bg-black-50 : #e8dfec ;
+  --text-black-900 : #302e4d ;
+  --text-black-700 : #504e70 ;
+   --skin-color : #ec1839;
+   /* --skin-color : #ff44dd; */
+}
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 0; 
+  background: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  font-size:16px;
+  line-height:1.5;
+  font-family: 'Poppins' , sans-serif;
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.shadow-dark{
+  box-shadow: 0 0 20px rgba(48 , 46 , 77 , 0.15);
+}
+.section-container{
+  position: relative;
+  width : clamp(280px, 95%, 1500px);
+  margin: auto;
+}
+.section-row{
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  margin:auto;
+  position : relative
+}
+
+.portfolio-btn{
+  padding:14px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: var(--skin-color);
+  border-radius: 40px;
+  border: 1px solid var(--skin-color);
+  transition: all 0.3s linear;
+  margin: 20px 0 0;
+  cursor: pointer;
+  color: #fff;
+}
+.portfolio-btn a{
+   color: #fff;
+   white-space: none;
+
+}
+.portfolio-btn:hover{
+  transform: scale(1.02);
+}
+.professionsBox{
+  letter-spacing: 0.1rem;
+  display: flex;
+  justify-content:flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:12px 0 ;
+}
+.professionsBox h3{
+  font-size:24px;
+  font-weight: 600;
+}
+.about-content-section{
+  margin-top:60px;
+}
+.aboutme-content{
+  font-size:15px;
+  letter-spacing:1px;
+  line-height: 27px;
+  color: var(--text-black-900);
+  margin: 10px 0;
+}
+ .Typewriter{
+  color: var(--skin-color) !important;
+   margin-left: 10px;
+}
+.Typewriter span{
+ font-size:24px !important;
+ font-weight: 600 !important;
+}
+.section-title h2{
+  font-size:28px;
+  padding: 3px 0;
+  color: var(--text-black-900);
+  position: relative;
+}
+.section-title h2::before{
+  content: '';
+  position: absolute;
+  background-color: var(--skin-color);
+  width:50px;
+  height:4px;
+  top: 100%;
+  left: 0%; 
+}
+.section-title h2::after{
+  content: '';
+  position: absolute;
+  background-color:var(--skin-color);
+  width:25px;
+  height:4px;
+  top: 100%;
+  left: 0%; 
+  margin-top: 8px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width:640px){
+  .Typewriter span{
+    font-size:20px !important;
+    font-weight: 600 !important;
+   }
+   .aboutme-content{
+    font-size:14px;
+    letter-spacing:1px;
+    line-height: 25px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width:540px) {
+  .portfolio-btn{
+    padding:12px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: var(--skin-color);
+    border-radius: 40px;
+    border: 1px solid var(--skin-color);
+    transition: all 0.3s linear;
+    margin: 20px 0 0;
+    cursor: pointer;
+    color: #fff;
+  }
+  .aboutme-content{
+    font-size:13px;
+    letter-spacing:1px;
+    line-height: 25px;
+  }
+  .professionsBox h3{
+    font-size: 15px;
+  }
+  .Typewriter span{
+    font-size:17px !important ;
+  }
+ 
+}
+
+@media screen and (max-width:450px) {
+  .professionsBox h3{
+    font-size: 15px;
+  }
+  .Typewriter span{
+    font-size:15px !important ;
   }
 }

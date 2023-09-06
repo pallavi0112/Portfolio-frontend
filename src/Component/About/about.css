@@ -1,0 +1,153 @@
+.about{
+    padding:60px 0px;
+}
+.about .section-row{
+  justify-content: space-between;
+}
+
+
+.skillbar-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2 , minmax(280px , 1fr ));
+    gap: 2rem;
+    margin:1.5rem 0;
+}
+.skill-header{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.skillbar-container .skill-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.skillbar-container .skill-bar .skill-bar-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: var(--skin-color);
+    font-size: 1.2rem;
+}
+.skillbar-container .skill-bar .skill-bar-progress {
+    flex-basis: 85%;
+
+}
+.skillbar-container .skill-bar .skill-bar-progress .progress-bar-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    color: var(--text-black-700);
+}
+.skillbar-container .skill-bar .skill-bar-progress .progress-bar-outer {
+   width:100%;
+   height:10px;
+   border-radius:10px;
+   background-color:#fff;
+   position: relative;
+}
+
+.skillbar-container .skill-bar .skill-bar-progress  .progress-bar-outer .progress-bar-inner {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to right , #310131, #ec1839);
+    border-radius:10px;
+    transition: width 0.5s linear;
+}
+
+
+
+.about .EduExpCard{
+    flex: 0 0 48%;
+    width: 100%;
+    position: relative;
+}
+.about .EduExpCard h3.header{
+    /* padding-inline: 15px; */
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.about .timeline{
+    width: 100%;
+    margin-top:20px;
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius:10px;
+    padding:15px;
+}
+.about .timeline .timeline-item{
+    padding-left:30px;
+    padding-bottom:30px;
+    position: relative;
+}
+.about .timeline .timeline-item::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 6px;
+    width:2px;
+    height: 100%;
+    background-color:var(--skin-color);
+}
+.about .timeline .timeline-item .timeline-date{
+    font-size:0.9rem;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.about .timeline .timeline-item .timeline-date svg{
+    margin-right: 0.4rem;
+}
+.about .timeline .timeline-item .timeline-title{
+    font-size:1.05rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.about .timeline .timeline-item .timeline-location{
+    font-size:0.85rem;
+    font-weight:500;
+    line-height:1.5rem;
+}
+.about .timeline .timeline-item  .timeline-desc{
+    font-size:0.88rem;
+    font-weight: 300;
+    color: var(--bg-black-700);
+    margin-top: 4px;
+}
+.about .timeline .timeline-item .circle-dot{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--skin-color);
+}
+
+
+@media screen and (max-width:768px) {
+    .about .section-row{
+        flex-direction: column;
+      }
+      .about .EduExpCard{
+        flex: 0 0 100%;
+        width: 100%;
+        margin-bottom:0.5rem;
+    }
+    
+  }
+
+  @media screen and (max-width:640px) {
+    .skillbar-container{
+        grid-template-columns: repeat(1 , minmax(280px , 1fr ));
+    }
+  }

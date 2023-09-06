@@ -1,0 +1,39 @@
+.portfolio-layout {
+  width: 100vw;
+  display: flex;
+}
+
+.portfolio-layout .portfolio-layout-leftside {
+ position: fixed;
+ top: 0%;
+ left: 0%;
+  width:270px;
+  height: 100%;
+  background-color: var(--bg-black-100);
+  transition: left 0.5s linear;
+}
+.portfolio-layout .portfolio-layout-leftside.active{
+  left:0;
+}
+.portfolio-layout .portfolio-layout-rightside {
+  position:relative;
+  top: 0%;
+  right: 0%;
+  left:270px;
+  display: block;
+  min-height: 100vh;
+  width: calc(100vw - 270px);
+  background-color: var(--bg-black-900);
+
+}
+
+@media screen and (max-width:1200px ) {
+  .portfolio-layout .portfolio-layout-leftside{
+    left:-270px;
+    z-index: 1000;
+  }
+  .portfolio-layout .portfolio-layout-rightside {
+    width:100%;
+    left: 0;
+  }
+}

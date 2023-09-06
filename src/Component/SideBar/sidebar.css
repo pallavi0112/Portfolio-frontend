@@ -1,0 +1,101 @@
+.portfolio-sidebar{
+    padding:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid var(--bg-black-50);
+}
+.portfolio-sidebar .logo{
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+}
+
+.portfolio-sidebar .logo a{
+    color: var(--text-black-900);
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 5px;
+    padding: 15px 20px;
+    position: relative;
+}
+.portfolio-sidebar .logo a span{
+    font-family: 'Clicker Script' , cursive;
+    font-size: 40px;
+}
+.portfolio-sidebar .logo a span::before{
+    content:'';
+    position: absolute;
+    bottom:0%;
+    left:0%;
+    border-left: 5px solid  var(--skin-color);
+    border-bottom: 5px solid  var(--skin-color);
+    width:20px;
+    height:20px;
+}
+.portfolio-sidebar .logo a span::after{
+    content:'';
+    position: absolute;
+    top:0%;
+    right:0%;
+    border-right: 5px solid  var(--skin-color);
+    border-top: 5px solid  var(--skin-color);
+    width:20px;
+    height:20px;
+}
+.portfolio-sidebar  ul {
+   margin-top: 50px;
+}
+.portfolio-sidebar  ul li{
+    margin-bottom:20px;
+    display:block;
+    transition: all 0.3s linear;
+ 
+}
+.portfolio-sidebar ul li a{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-bottom: 1px solid var(--bg-black-50);
+    color:var(--text-black-900);
+    padding: 5px 15px;
+    transition: all 0.3s linear;
+}
+.portfolio-sidebar ul li a svg{
+    margin-right: 15px;
+}
+.portfolio-sidebar ul li.active  a{
+    color: var(--skin-color);
+}
+
+.portfolio-sidebar .menu-toggler{
+    position:fixed;
+    top:3%;
+    right:3%;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    height: 40px;
+    width: 45px;
+    cursor: pointer;
+    border-radius: 5px;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+.portfolio-sidebar .menu-toggler svg{ 
+   color: var(--skin-color);
+   font-size: 1.5rem;
+   font-weight: 700;
+}
+
+
+@media screen and (max-width:1199px) {
+    .portfolio-sidebar .menu-toggler{
+        display: flex;
+    }
+}

@@ -1,0 +1,175 @@
+.contact{
+    padding:60px 0px;
+    height: auto;
+}
+
+.contactform-container{
+    width: 100%;
+    padding: 1rem;
+    border:1px solid var(--skin-color);
+    border-radius: 1rem;
+    position: relative;
+    /* background-color:#21313C; */
+    overflow: hidden;
+}
+.contactform-container .loader{
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    height: 4px;
+    width: 50%;
+    border-radius: 1rem;
+    opacity: 1;
+    background-color: var(--skin-color);
+    box-shadow: 1px -1px 10px 1px rgba(236, 24, 56, 0.755);
+    display: none;
+    transition: all 2s linear;
+}
+.contactform-container.active .loader{
+    animation: loader 2s linear infinite;
+    display: block;
+}
+@keyframes loader {
+    0% {
+      left:5%
+    }
+    50%{
+        left:50%
+    }
+    90%{
+        opacity: 0;
+    }
+    100% {
+        left:100%
+    }
+  }
+.contactform-container form{
+    width: 100%;
+    margin-top: 1rem;
+}
+.contactform-container form input,
+.contactform-container form textarea{
+    width: 100%;
+    padding:0.8rem 1rem;
+    border-radius:0.8rem;
+    border: 1px solid var(--skin-color);
+    background-color: #fff;
+    margin-bottom:1rem;
+    outline: none;
+    color: var(--text-black-700);
+    font-size:1rem;
+}
+.contactform-container form textarea{
+    height: 150px;
+    overflow-y: auto;
+}
+.contact-container{
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    /* background-color:#001E2B; */
+    grid-template-columns:repeat(2 , 1fr);
+    gap: 2rem;
+    margin-top:3rem;
+}
+.contact-container .contact-gridBox{
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns:repeat(2, minmax(220px, 1fr));
+    gap:3rem;
+    /* background-color: #fff; */
+}
+.contact-container .contact-gridBox>div{
+    width: 100%;
+    box-shadow: 0 20px 25px -5px rgba(252, 40, 100, 0.1), 0 8px 10px -6px rgba(252, 40, 100, 0.1);
+    /* border: 1px solid var(--skin-color); */
+    border-top: 5px solid var(--skin-color);
+    padding:1rem;
+    border-radius:0.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#fff;
+    height: 150px;
+
+}
+.contact-container .contact-gridBox>div .contact-circle-overlay{
+    border-radius: 50%;
+    box-shadow: inset 0 5px 15px 0px #b3afaf38;
+    border: 1px solid #f2f2fc;
+    background-color: #f2f2fc;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    top: -25%;
+    transform: translateX(-50%);
+}
+.contact-container .contact-gridBox>div .contact-icon{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--skin-color);
+    background-color: #fff;
+    width:70px;
+    height:70px;
+    color: var(--skin-color);
+    font-size:2rem;
+    position: absolute;
+    left: 50%;
+    top: -25%;
+    transform: translateX(-50%);
+    transition: top 0.5s linear;
+    animation: replace linear 5s infinite;
+}
+@keyframes replace {
+  0% {
+    top: -25%; 
+  }
+  50% {
+    top: -35%; 
+    box-shadow: 0 20px 25px -5px rgba(252, 40, 100, 0.1), 0 8px 10px -6px rgba(252, 40, 100, 0.1);
+  }
+  100% {
+    top: -25%; 
+  }
+}
+
+.contact-container .contact-gridBox>div .contact-details h3{
+    font-size:1rem;
+    line-height: 1.5rem;
+    font-weight:600 !important;
+    text-align: center;
+}
+.contact-container .contact-gridBox>div .contact-details p a{
+    font-size:0.9rem;
+    text-align: center;
+    overflow-wrap: break-word;
+    color:var(--text-black-700);
+    transition:color 0.3s linear
+}
+.contact-container .contact-gridBox>div:hover .contact-details p a{
+    color: var(--skin-color);
+}
+
+.contact-container button:disabled {
+    background-color: rgba(105, 33, 44, 0.755);
+    border:1px solid rgba(124, 39, 52, 0.755); 
+    color: #e3e3e3;
+  }
+
+
+@media screen and (max-width:810px) {
+    .contact-container{
+        grid-template-columns:1fr;
+     
+    }
+  }
+@media screen and (max-width:640px) {
+    .contact-container .contact-gridBox{
+        grid-template-columns:1fr;
+    }
+  }
