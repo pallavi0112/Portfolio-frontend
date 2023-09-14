@@ -43,7 +43,7 @@ const ContactForm = () => {
         const response = await api.post('/sendmail', formData, {
           headers: { 'Content-Type': 'application/json' },
         });
-  
+        console.log(response)
         if (response.status === 200) {
           setIsLoading(false);
           setIsButtonDisabled(true);
@@ -53,6 +53,11 @@ const ContactForm = () => {
             hideProgressBar: false,
             progress: undefined,
           });
+          setFormData({    
+              name: '',
+              email: '',
+              message: '',         
+          })
         }
       } catch (error) {
         console.error(error);
