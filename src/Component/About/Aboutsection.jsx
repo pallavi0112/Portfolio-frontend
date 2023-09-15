@@ -13,7 +13,7 @@ const Aboutsection = () => {
                 <SectionTitle title="About Me" />
                 <div className='about-content-section'>
                     <AboutContent
-                        head="I'm Pallavi Soldey and"
+                        head="I'm Pallavi Soldey a"
                         para="A highly motivated and passionate front-end developer with a proven ability
                          to collaborate effectively with senior developers while spending extra time to be mentored.
                           I am a fast learner and always keen to learn new things from my seniors
